@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NTC-wl-tnT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Youtube Man Collection View Controller-->
+        <scene sceneID="cjK-n1-yoL">
+            <objects>
+                <collectionViewController id="c7e-3m-ODM" customClass="YoutubeManCollectionViewController" customModule="youtube_guess_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KPH-bj-1rm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xw5-iO-fkL">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YoutubeCell" id="xEM-lA-hMc" customClass="YoutubeManCollectionViewCell" customModule="youtube_guess_it" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="i6T-la-sm4">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Jj-zX-iQV">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="3Jj-zX-iQV" secondAttribute="trailing" id="96Y-sc-aH2"/>
+                                        <constraint firstItem="3Jj-zX-iQV" firstAttribute="leading" secondItem="i6T-la-sm4" secondAttribute="leading" id="d0T-xY-r6d"/>
+                                        <constraint firstItem="3Jj-zX-iQV" firstAttribute="top" secondItem="i6T-la-sm4" secondAttribute="top" id="jYz-9q-Uyr"/>
+                                        <constraint firstAttribute="bottom" secondItem="3Jj-zX-iQV" secondAttribute="bottom" id="vQL-eh-Vc6"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="pictureView" destination="3Jj-zX-iQV" id="eEP-i2-0n4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="c7e-3m-ODM" id="Rlg-T5-MB9"/>
+                            <outlet property="delegate" destination="c7e-3m-ODM" id="gkt-pn-R3o"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Yla-zC-B6h">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="tOn-06-Swx">
+                            <connections>
+                                <segue destination="yHk-7K-pVd" kind="presentation" id="bWv-Ko-Rre"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cw-JS-3FM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.73913043478262" y="-31.473214285714285"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="IGu-Y9-xBQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V62-fC-jcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="yHk-7K-pVd" customClass="FilterViewController" customModule="youtube_guess_it" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DfF-9v-Hit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aKw-Qz-9XY">
+                                <rect key="frame" x="92" y="154" width="230" height="500"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ab-DU-mHQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="4ab-DU-mHQ" secondAttribute="height" multiplier="1:1" id="dMe-V5-fyO"/>
+                                        </constraints>
+                                        <state key="normal" image="gamer"/>
+                                        <connections>
+                                            <action selector="gaemrButtonPressed:" destination="yHk-7K-pVd" eventType="touchUpInside" id="Y7x-zg-7Ol"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-Id-GfK">
+                                        <rect key="frame" x="0.0" y="270" width="230" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="L8T-Bp-7qi"/>
+                                            <constraint firstAttribute="width" secondItem="t2a-Id-GfK" secondAttribute="height" multiplier="1:1" id="sOj-Pp-CK3"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="nongamer"/>
+                                        <connections>
+                                            <action selector="nonGaemrButtonPressed:" destination="yHk-7K-pVd" eventType="touchUpInside" id="ASW-f1-Dgz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Loadout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZY-AJ-KqV">
+                                <rect key="frame" x="125" y="32" width="164" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BJx-1h-WdF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aKw-Qz-9XY" firstAttribute="centerX" secondItem="BJx-1h-WdF" secondAttribute="centerX" id="Plf-bS-9wq"/>
+                            <constraint firstItem="DZY-AJ-KqV" firstAttribute="top" secondItem="BJx-1h-WdF" secondAttribute="top" constant="32" id="W6Z-bh-nIE"/>
+                            <constraint firstItem="aKw-Qz-9XY" firstAttribute="centerY" secondItem="BJx-1h-WdF" secondAttribute="centerY" id="WOH-d9-AAN"/>
+                            <constraint firstItem="DZY-AJ-KqV" firstAttribute="centerX" secondItem="BJx-1h-WdF" secondAttribute="centerX" id="fIS-1y-8v7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1094" y="-31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h6n-yy-btw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NTC-wl-tnT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k1Q-nA-qmE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c7e-3m-ODM" kind="relationship" relationship="rootViewController" id="Ysb-Vy-JKE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7M-aC-baH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488.40579710144931" y="-31.473214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gamer" width="228" height="221"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="nongamer" width="236" height="229"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
